@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "TabSwitchr",
+  "description": "A Google Chrome extension that adds a mini URL bar via macro to switch/add tabs easily",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "tabs.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["/src/jquery.js", "/src/all.js", "/src/popper.js", "/src/snackbar.js", "/src/content.js"],
+      "css": ["/stylesheets/snackbar.css", "/stylesheets/material.css", "/stylesheets/stylesheet.css"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["tabs", "history"]
+}

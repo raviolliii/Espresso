@@ -1,0 +1,25 @@
+#snackbar-container {
+	width: 30%;
+	margin-bottom: 2%;
+	margin-left: 35%;
+}
+
+.fa-coffee {
+	color: #ff831e; 
+	font-size: 16px;
+}
+
+input#urlBarInput {
+	background-color: transparent;
+	color: white;
+	width: 80%;
+	font-family: avenir;
+	font-size: 16px;
+	border: none;
+	padding: 1px 2px;
+	margin-left: 2.5%;
+}
+
+input#urlBarInput:focus {
+	outline: none;
+}

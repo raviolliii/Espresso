@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "TabSwitchr",
+  "name": "Espresso",
   "description": "A Google Chrome extension that adds a mini URL bar via macro to switch/add tabs easily",
   "version": "1.0",
   "browser_action": {

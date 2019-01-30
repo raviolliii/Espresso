@@ -1,14 +1,27 @@
+//===========================================================
+// background.js
+//
+// Runs in the background of Chrome, and handles tab
+// search/switching, and history search
+//===========================================================
+
+
+//preset values
 var presets = {
     "work": ["https://mail.google.com/mail/u/1/#inbox", "https://sakai.rutgers.edu/portal"],
     "chill": ["https://www.netflix.com"]
 }
 
+//filters chrome tab by keyword phrase
+//returns true if the tab is a possible switch, (contains
+//phrase, etc.), false otherwise
 function filterByKeywords(tab, phrase) {
     let url = tab.url.includes(phrase.toLowerCase());
     let title = tab.title.toLowerCase().includes(phrase.toLowerCase());
     return url || title;
 }
 
+//opens chrome tabs with the given urls
 function openTabs(urls) {
     for (let i = 0; i < urls.length; i++) {
         chrome.tabs.create({ url: urls[i] });
